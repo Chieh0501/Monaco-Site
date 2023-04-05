@@ -1,0 +1,3 @@
+UNIX_TIMESTAMP(timeStamp),packetId,sequenceId,mode,isGroundSafe,isSafeMode,isLeopCompleted,isSendAllHk,isSendAllEvents,isAuthorizedAntennaDeployment,isAuthorizedAdcs,isAuthorizedTx,leopWaitTime,isRadioSend
+1676568386,793,16,0,1,1,1,1,1,1,1,0,190,0
+1676568475,793,17,0,1,1,1,1,1,1,1,0,190,0

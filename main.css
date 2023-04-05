@@ -1,0 +1,70 @@
+body {
+
+  background: url('img/background.jpg') no-repeat center center fixed;
+
+  background-size: cover; /* for IE9+, Safari 4.1+, Chrome 3.0+, Firefox 3.6+ */
+  -webkit-background-size: cover; /* for Safari 3.0 - 4.0 , Chrome 1.0 - 3.0 */
+  -moz-background-size: cover; /* optional for Firefox 3.6 */ 
+  -o-background-size: cover; /* for Opera 9.5 */
+  margin: 0; /* to remove the default white margin of body */
+  padding: 5vw; /* to remove the default white margin of body */
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+img {
+  width: 8vw;
+}
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.5;
+}
+div#v{
+  grid-column: 1;
+  grid-row: 1;
+}
+div#c{
+  grid-column: 2;
+  grid-row: 1;
+}
+div#t{
+  grid-column: 3;
+  grid-row: 1;
+}
+div#timediv{
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+div#messagediv{
+  grid-column: 1 / span 3;
+  grid-row: 2;
+}
+div#metricsdiv{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 1 / span 3;
+  grid-row: 3;
+}
+div#timediv > img{
+  display: inline-block;
+}
+p#timestamp {
+  display: inline-block;
+  font-size: 4vw;
+}
+p {
+  display: inline-block;
+  font-size: 3vw;
+}
+form {
+  display: inline-block;
+  font-size: 4vw;
+}
+#message_space {
+  display: inline-block;
+  font-size: 4vw;
+}

@@ -1,0 +1,93 @@
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="main.css">
+  <script type="text/javascript">
+  function LoadFile(FileName,RespType,FileType,RunMe)
+  {   var AJAXFileReader=new XMLHttpRequest();
+
+      AJAXFileReader.addEventListener("error",function FRFailed()
+          {   // This will be executed if an error occurs.
+              console.log("Error:",this.status);
+          });
+
+      AJAXFileReader.addEventListener("timeout",function FRTimeOut()
+          {   // This will be executed if the reading times out.
+              console.log("File reading timed out!");
+          });
+
+      AJAXFileReader.addEventListener("abort",
+          function FRCancel()
+          {   // This will confirm reading was aborted.
+              console.log("File reading cancelled by user!");
+          });
+      
+      AJAXFileReader.addEventListener("load",
+          function Finished()
+          {   // When reading is finished, send data to external function.
+              if ((this.readyState==4)&&(this.status==200))
+              {
+                  RunMe(this.response);
+              }
+          },
+          false);
+
+      AJAXFileReader.open("GET",FileName,true);
+      AJAXFileReader.overrideMimeType(FileType);
+      AJAXFileReader.responseType=RespType;
+      AJAXFileReader.timeout=10000; // Setting time-out to 10 s.
+
+      AJAXFileReader.send();
+  }
+
+  function TracerOn(X)
+  {   // This will be executed after the file is completely loaded.
+      let csv_data = X;
+      var rows = X.split("\n");
+      var cells = rows[rows.length - 2].split(",");
+      console.log(cells);
+      document.getElementById("timestamp").innerHTML="Last Updated at:  " + cells[0];
+      document.getElementById("message_space").innerHTML=cells[1];
+      document.getElementById("voltage").innerHTML="Battery Voltage: " + cells[2];
+      document.getElementById("current").innerHTML="Battery Current: " + cells[3];
+      document.getElementById("temperature").innerHTML="Temperature: " + cells[4];
+      document.getElementById("mode").innerHTML="Mode: " + cells[5];
+  }
+
+  function Startup()
+  {   // Run after the Page is loaded.
+      LoadFile("data/data_beacon.csv","text","text/plain;charset=utf-8",TracerOn);
+  }
+
+  </script>
+</head>
+<body onload="Startup()">
+  <div id="timediv">
+    <div class="transbox">
+      <img src="img/clock.png">
+      <p id="timestamp">Text...</p>
+    </div>
+  </div>
+  <div id="messagediv">
+    <div class="transbox">
+      <form>
+        Message: <br>
+        <textarea rows = "1" cols="30" id="message_space">
+          Text...
+        </textarea>
+      </form>
+    </div>
+  </div>
+  <div id="metricsdiv">
+    <div id="v" class="transbox">
+      <p id="voltage">Text...</p>
+    </div>
+    <div id="c" class="transbox">
+      <p id="current">Text...</p>
+    </div>
+    <div id="t" class="transbox">
+      <p id="temperature">Text...</p>
+    </div>
+  </div>
+</body>
+</html>
