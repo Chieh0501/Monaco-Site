@@ -1,20 +1,10 @@
 body {
-
-  background: url('img/background.jpg') no-repeat center center fixed;
-
-  background-size: cover; /* for IE9+, Safari 4.1+, Chrome 3.0+, Firefox 3.6+ */
-  -webkit-background-size: cover; /* for Safari 3.0 - 4.0 , Chrome 1.0 - 3.0 */
-  -moz-background-size: cover; /* optional for Firefox 3.6 */ 
-  -o-background-size: cover; /* for Opera 9.5 */
   margin: 0; /* to remove the default white margin of body */
   padding: 5vw; /* to remove the default white margin of body */
   overflow: hidden;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-}
-img {
-  width: 8vw;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: 1fr;
 }
 div.transbox {
   margin: 30px;
@@ -22,32 +12,34 @@ div.transbox {
   border: 1px solid black;
   opacity: 0.5;
 }
-div#v{
+div#vdiv{
+  grid-column: 1;
+  grid-row: 3;
+}
+div#cdiv{
+  grid-column: 1;
+  grid-row: 4;
+}
+div#tdiv{
+  grid-column: 1;
+  grid-row: 2;
+}
+div#bdiv{
+  grid-column: 1;
+  grid-row: 5;
+}
+div#timediv{
   grid-column: 1;
   grid-row: 1;
 }
-div#c{
-  grid-column: 2;
-  grid-row: 1;
-}
-div#t{
-  grid-column: 3;
-  grid-row: 1;
-}
-div#timediv{
-  grid-column: 1 / span 3;
-  grid-row: 1;
-}
-div#messagediv{
+/* div#messagediv{
   grid-column: 1 / span 3;
   grid-row: 2;
-}
+} */
 div#metricsdiv{
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column: 1 / span 3;
-  grid-row: 3;
+  grid-template-columns: repeat(1, 1fr);
 }
 div#timediv > img{
   display: inline-block;
@@ -56,15 +48,54 @@ p#timestamp {
   display: inline-block;
   font-size: 4vw;
 }
-p {
+div > .vl {
+  margin: 10px;
+  display: inline-block;
+  border-left: 4px solid rgb(35, 35, 168);
+  height: auto;
+  position: relative;
+  left: 0;
+  margin-left: -3px;
+  top: 0;
+  grid-column: 3;
+  grid-row: 1;
+}
+div.metricdiv{
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 5px #d6d6d6, 0px -10px 5px #d6d6d6;
+}
+div.metricdiv p{
+  position: relative;
+  top: 40%;
+  padding: 0 0 0 0;
+  margin: 0;
+}
+div.metricdiv p.field{
   display: inline-block;
   font-size: 3vw;
+  text-align: center;
+  font-weight: bold;
+  font-weight: bold;
+  font-weight: bold;
+  font-weight: bold;
+  color: rgb(35, 35, 168);
+  grid-column: 1 / span 2;
+  grid-row: 1;
 }
-form {
+div.metricdiv p.answer{
   display: inline-block;
-  font-size: 4vw;
+  font-size: 3vw;
+  text-align: center;
+  font-weight: bold;
+  font-weight: bold;
+  font-weight: bold;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  grid-column: 4;
+  grid-row: 1;
 }
-#message_space {
-  display: inline-block;
-  font-size: 4vw;
-}
+

@@ -47,11 +47,11 @@
       var cells = rows[rows.length - 2].split(",");
       console.log(cells);
       document.getElementById("timestamp").innerHTML="Last Updated at:  " + cells[0];
-      document.getElementById("message_space").innerHTML=cells[1];
-      document.getElementById("voltage").innerHTML="Battery Voltage: " + cells[2];
-      document.getElementById("current").innerHTML="Battery Current: " + cells[3];
-      document.getElementById("temperature").innerHTML="Temperature: " + cells[4];
-      document.getElementById("mode").innerHTML="Mode: " + cells[5];
+      document.getElementById("voltage").innerHTML= cells[2];
+      document.getElementById("current").innerHTML=cells[3];
+      document.getElementById("temperature").innerHTML=cells[4];
+      document.getElementById("bcounter").innerHTML=cells[6];
+      // document.getElementById("mode").innerHTML="Mode: " + cells[5];
   }
 
   function Startup()
@@ -62,32 +62,29 @@
   </script>
 </head>
 <body onload="Startup()">
-  <div id="timediv">
-    <div class="transbox">
-      <img src="img/clock.png">
-      <p id="timestamp">Text...</p>
-    </div>
+  <div cid="timediv">
+    <h1 id="Title">Basic Telemetry Data</h1>
+    <h3 id="timestamp">Text...</h3>
   </div>
-  <div id="messagediv">
-    <div class="transbox">
-      <form>
-        Message: <br>
-        <textarea rows = "1" cols="30" id="message_space">
-          Text...
-        </textarea>
-      </form>
-    </div>
+  <div class="metricdiv" id="vdiv">
+    <div class="vl"></div>
+    <p class="answer" id="voltage">Text...</p>
+    <p class="field">Battery Voltage</p> 
   </div>
-  <div id="metricsdiv">
-    <div id="v" class="transbox">
-      <p id="voltage">Text...</p>
-    </div>
-    <div id="c" class="transbox">
-      <p id="current">Text...</p>
-    </div>
-    <div id="t" class="transbox">
-      <p id="temperature">Text...</p>
-    </div>
+  <div class="metricdiv" id="cdiv">
+    <div class="vl"></div>
+    <p class="answer" id="current">Text...</p>
+    <p class="field">Battery Current</p> 
+  </div>
+  <div class="metricdiv" id="tdiv">
+    <div class="vl"></div>
+    <p class="answer" id="temperature">Text...</p>
+    <p class="field">Temperature</p> 
+  </div>
+  <div class="metricdiv" id="bdiv">
+    <div class="vl"></div>
+    <p class="answer" id="bcounter">Text...</p>
+    <p class="field">Boot Counter</p> 
   </div>
 </body>
 </html>
