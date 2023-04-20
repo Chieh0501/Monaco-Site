@@ -1,7 +1,34 @@
-<html>
-<head><title>403 Forbidden</title></head>
-<body>
-<center><h1>403 Forbidden</h1></center>
-<hr><center>nginx</center>
-</body>
-</html>
+UNIX_TIMESTAMP(timeStamp),message,batteryVoltage,batteryCurrent,temperature,mode,epsBootCounter,unauthorizedCommands
+1677162126,Une Ecole pour la Vie,0,0,0,0,0,0
+946707647,Une Ecole pour la Vie,7947,-2,-320,3,201,0
+946690917,Une Ecole pour la Vie,7965,33,200,3,201,0
+946690737,Une Ecole pour la Vie,7962,36,0,3,201,0
+946737690,Une Ecole pour la Vie,7904,-83,320,3,201,0
+946770431,Une Ecole pour la Vie,7947,8,-240,3,201,0
+946776188,Une Ecole pour la Vie,7956,17,-80,3,201,0
+946781944,Une Ecole pour la Vie,7974,58,-240,3,201,0
+946792018,Une Ecole pour la Vie,7960,54,-1040,3,201,0
+946828537,Une Ecole pour la Vie,7906,-85,320,3,201,0
+946861098,Une Ecole pour la Vie,7971,53,40,3,201,0
+946861458,Une Ecole pour la Vie,7972,58,-40,3,201,0
+946877109,Une Ecole pour la Vie,7960,69,-1080,3,201,0
+946880707,Une Ecole pour la Vie,7875,-84,-720,3,201,0
+946992962,Une Ecole pour la Vie,0,0,360,3,201,0
+946998718,Une Ecole pour la Vie,0,0,760,3,201,0
+947004295,Une Ecole pour la Vie,0,0,360,3,201,0
+947005734,Une Ecole pour la Vie,0,0,-960,3,201,0
+947005554,Une Ecole pour la Vie,0,0,-760,3,201,0
+947005375,Une Ecole pour la Vie,0,0,-520,3,201,0
+947031639,Une Ecole pour la Vie,0,0,40,3,201,0
+947037036,Une Ecole pour la Vie,0,0,-8997,254,51459,0
+947047470,Une Ecole pour la Vie,0,0,-880,3,201,0
+947047650,Une Ecole pour la Vie,0,0,-760,3,201,0
+947015809,Une Ecole pour la Vie,0,0,320,3,201,0
+947015629,Une Ecole pour la Vie,0,0,480,3,65535,0
+947051248,Une Ecole pour la Vie,0,0,-880,3,201,0
+947053227,Une Ecole pour la Vie,0,0,-960,3,201,0
+947053047,Une Ecole pour la Vie,0,0,-1000,3,201,0
+947089386,Une Ecole pour la Vie,0,0,480,3,201,0
+947090825,Une Ecole pour la Vie,0,0,-760,3,201,0
+947090645,Une Ecole pour la Vie,0,0,-440,3,201,0
+947092624,Une Ecole pour la Vie,0,0,-1200,3,201,0

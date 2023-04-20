@@ -1,7 +1,5 @@
-<html>
-<head><title>403 Forbidden</title></head>
-<body>
-<center><h1>403 Forbidden</h1></center>
-<hr><center>nginx</center>
-</body>
-</html>
+name,catalogId,tleSourceId,lastTleUpdated,line1,line2
+SUN,SUN,0,NULL,NULL,NULL
+ISS,98067A,1,NULL,NULL,NULL
+LEMUR-2-YUASA,18046G,1,NULL,NULL,NULL
+ROSEYCUBESAT-1,23054AL,2,2023-04-19 21:01:44,1 56182U 23054E   23108.61397398  .00020805  00000+0  93317-3 0  9996,2 56182  97.4047   4.4045 0007036 230.6428 129.4184 15.21210375  1112
